@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Deployment
+metadata:
+  name: transmission
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: transmission
+  template:
+    spec:
+      containers:
+      - name: transmission
+        image: lscr.io/linuxserver/transmission:latest
