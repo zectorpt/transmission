@@ -6,7 +6,7 @@ spec:
   selector:
     matchLabels:
       new-label: transmission
-  replicas: 1 # tells deployment to run 1 pods matching the template
+  replicas: 1 # tells deployment to run 2 pods matching the template
   template:
     metadata:
       labels:
@@ -15,5 +15,7 @@ spec:
       containers:
       - name: transmission
         image: jomedei/transmissionv01:latest
+        ports:
+        - containerPort: 9091
         command: [ "sleep" ]
         args: [ "infinity" ]
