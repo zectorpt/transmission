@@ -17,5 +17,5 @@ spec:
         image: jomedei/transmissionv02:latest
         ports:
         - containerPort: 9091
-        command: [ "sleep" ]
-        args: [ "infinity" ]
+        command: ["/bin/sh","-c"]
+        args: [ "/etc/init.d/transmission-daemon start; sleep infinity" ]
