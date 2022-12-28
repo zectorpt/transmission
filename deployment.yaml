@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: transmission
-        image: jomedei/transmissionv01:latest
+        image: jomedei/transmissionv02:latest
         ports:
         - containerPort: 9091
         command: [ "sleep" ]
