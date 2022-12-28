@@ -19,3 +19,16 @@ spec:
         - containerPort: 9091
         command: ["/bin/sh","-c"]
         args: [ "/etc/init.d/transmission-daemon start; sleep infinity" ]
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: service9091
+spec:
+  type: LoadBalancer
+  selector:
+    new-label: transmission
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 9091
