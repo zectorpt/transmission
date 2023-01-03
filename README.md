@@ -20,8 +20,8 @@ kubectl delete service service9091<br>
 
 # Next version
 <br>
-In the next version the download will be done to a stoage account
+In the next version the download will be done to a storage account
 
 # Where is my downloads?
 <br>
-Your downloads are host inside the pod in the folder: /var/lib/transmission-daemon/downloads
+Your downloads are hosted inside the pod in the folder: /var/lib/transmission-daemon/downloads
